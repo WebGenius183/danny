@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <title>Daniel Studio</title>
+</head>
+<body>
+
+    <nav>
+        <div class="nav">
+            <div class="logo">
+                <img src="./STUDIO DANIEL LOGO .png" alt="">
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#samples">Samples</a></li>
+                    <li class="mobile-only"><a href="#contact"><button>Get In Touch</button></a></li>
+                </ul>
+            </div>
+
+            <div class="get desktop-only">
+                <a href="#contact"><button>Get In Touch</button></a>
+            </div>
+
+            <div class="desktop-only">
+                <a href="#contact"><button>Get In Touch</button></a>
+            </div>
+
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="hero" id="home">
+        <canvas id="wave-canvas"></canvas>
+        <div class="title">
+            <h1><span id="typewriter"></span></h1>
+
+            <div class="get">
+                <a href=""><button>Get In Touch</button></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="bio" id="aboout">
+        <div class="left">
+            <span class="bio-heading">Studio Daniel</span>
+
+            <p>Where your sound becomes your statement.</p>
+
+            <p>At Studio Daniel, we turn ideas, melodies, and raw recordings into sound that feels polished, powerful, and ready to be heard.</p>
+
+            <p>From singles, EPs, and full albums to commercial jingles and music for film productions, we provide professional music production and audio services designed around your vision. Whether you need a beat that inspires you, a mix that brings every element to life, or a master that gives your music the final professional touch, we're here to make it happen.</p>
+
+            <p>We believe great sound shouldn't have to come at an unreasonable price. That's why we combine attention to detail, creativity, and professional-quality results with rates that are affordable and friendly to artists, creators, brands, and filmmakers.</p>
+
+            <p>Your vision. Your sound. Our craft.</p>
+        </div>
+
+        <div class="right">
+            <img src="./danny.png" alt="">
+        </div>
+    </div>
+
+    <div class="samples" id="samples">
+        <h2>Listen to the <span class="highlight">craft.</span></h2>
+
+        <div class="track-list">
+            <div class="track" data-src="./audio/track1.mp3">
+                <button class="play-btn" aria-label="Play">
+                    <svg class="icon-play" viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
+                    <svg class="icon-pause" viewBox="0 0 24 24" width="18" height="18" style="display:none"><path fill="currentColor" d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+                </button>
+
+                <div class="track-info">
+                    <p class="track-name">Midnight Sessions</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+
+                <span class="track-time">0:00</span>
+            </div>
+
+            <div class="track" data-src="./audio/track2.mp3">
+                <button class="play-btn" aria-label="Play">
+                    <svg class="icon-play" viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
+                    <svg class="icon-pause" viewBox="0 0 24 24" width="18" height="18" style="display:none"><path fill="currentColor" d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+                </button>
+
+                <div class="track-info">
+                    <p class="track-name">Lagos Nights</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+
+                <span class="track-time">0:00</span>
+            </div>
+
+            <div class="track" data-src="./audio/track3.mp3">
+                <button class="play-btn" aria-label="Play">
+                    <svg class="icon-play" viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
+                    <svg class="icon-pause" viewBox="0 0 24 24" width="18" height="18" style="display:none"><path fill="currentColor" d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+                </button>
+
+                <div class="track-info">
+                    <p class="track-name">Final Master</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+
+                <span class="track-time">0:00</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact" id="contact">
+        <div class="contact-info">
+            <h2>Let's make something<br><span class="highlight">worth hearing.</span></h2>
+            <p>Tell us about your project and we'll get back to you within 24 hours.</p>
+
+            <div class="contact-details">
+                <p><strong>Tel No</strong><br>+234 810 840 9817</p>
+                <p><strong>Based in</strong><br>Lagos, Nigeria</p>
+            </div>
+        </div>
+
+        <form class="contact-form">
+            <input type="text" name="name" placeholder="Your name" required>
+            <input type="number" name="number" placeholder="Your Phone Number" required>
+            <textarea name="message" placeholder="Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+    
+<script src="wave.js"></script>
+<script src="player.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>
