@@ -1,4 +1,4 @@
-Daniel Studio 🎵
+# Daniel Studio 🎵
 
 A modern, dark-themed one-page website for **Daniel Studio**, a music production and audio services brand.
 
