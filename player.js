@@ -14,6 +14,10 @@ document.querySelectorAll('.track').forEach(trackEl => {
         return `${m}:${s}`;
     }
 
+    audio.addEventListener('loadedmetadata', () => {
+        timeLabel.textContent = formatTime(audio.duration);
+    });
+
     function pauseAllOthers() {
         document.querySelectorAll('.track').forEach(other => {
             if (other !== trackEl) {
