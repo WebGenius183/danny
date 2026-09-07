@@ -172,23 +172,44 @@
     </div>
 
     <div class="contact" id="contact">
-        <div class="contact-info">
-            <h2>Let's make something<br><span class="highlight">worth hearing.</span></h2>
-            <p>Tell us about your project and we'll get back to you within 24 hours.</p>
+    <div class="contact-info">
+        <h2>Let's make something<br><span class="highlight">worth hearing.</span></h2>
+        <p>Tell us about your project and we'll get back to you within 24 hours.</p>
 
-            <div class="contact-details">
-                <p><strong>Tel No</strong><br>+234 810 840 9817</p>
-                <p><strong>Based in</strong><br>Lagos, Nigeria</p>
-            </div>
+        <div class="contact-details">
+            <p><strong>Tel No</strong><br>+234 810 840 9817</p>
+            <p><strong>Based in</strong><br>Lagos, Nigeria</p>
         </div>
-
-        <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-            <input type="text" name="name" placeholder="Your name" required>
-            <input type="tel" name="number" placeholder="Your Phone Number" required>
-            <textarea name="message" placeholder="Message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
     </div>
+
+    <form class="contact-form" id="whatsappForm">
+        <input type="text" id="name" placeholder="Your name" required>
+
+        <input type="tel" id="number" placeholder="Your Phone Number" required>
+
+        <textarea id="message" placeholder="Message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+
+<script>
+document.getElementById("whatsappForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const number = document.getElementById("number").value;
+    const message = document.getElementById("message").value;
+
+    const whatsappNumber = "2348108409817";
+
+    const whatsappMessage = `Hello!%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(number)}%0A%0AMessage:%0A${encodeURIComponent(message)}`;
+
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
+    window.open(whatsappURL, "_blank");
+});
+</script>
     
 <script src="wave.js"></script>
 <script src="player.js"></script>
